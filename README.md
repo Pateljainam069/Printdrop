@@ -91,7 +91,6 @@ printdrop-server/       → FastAPI backend (Render)
 
 ```bash
 git clone https://github.com/your-username/printdrop
-git clone https://github.com/your-username/printdrop-server
 ```
 
 ### 2. Set up Supabase
