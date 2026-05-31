@@ -71,10 +71,48 @@ PrintDrop replaces that with a proper system — built for the shop owner, easy 
 
 ## Project Structure
 
+```mermaid
+graph TD
+    root["printdrop/ (Frontend)"]
+    
+    root --> config_files[Config Files]
+    config_files --> env_example[".env.example"]
+    config_files --> gitignore[".gitignore"]
+    config_files --> eslint["eslint.config.js"]
+    config_files --> postcss["postcss.config.js"]
+    config_files --> tailwind["tailwind.config.js"]
+    config_files --> vite_config["vite.config.js"]
+    config_files --> pkg_json["package.json"]
+    
+    root --> public["public/"]
+    public --> favicon["favicon.svg"]
+    public --> icons["icons.svg"]
+    public --> manifest["manifest.json"]
+    public --> sw["sw.js"]
+    
+    root --> src["src/"]
+    src --> main_jsx["main.jsx"]
+    src --> app_jsx["App.jsx"]
+    src --> app_css["App.css"]
+    src --> index_css["index.css"]
+    
+    src --> assets["assets/"]
+    assets --> hero["hero.png"]
+    
+    src --> lib["lib/"]
+    lib --> supabase["supabase.js"]
+    
+    src --> pages["pages/"]
+    pages --> customer_upload["CustomerUpload.jsx"]
+    pages --> owner_dashboard["OwnerDashboard.jsx"]
+    pages --> qr_page["QRPage.jsx"]
+    pages --> track_job["TrackJob.jsx"]
+    
+    src --> utils["utils/"]
+    utils --> job_code["jobCode.js"]
 ```
-printdrop/              → React frontend (Vercel)
-printdrop-server/       → FastAPI backend (Render)
-```
+
+*Note: The FastAPI backend lives in a separate repository `printdrop-server`.*
 
 ---
 
